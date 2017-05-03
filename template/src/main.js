@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './app'
-import xx from '../dist/index'
+import xx from '~components/index'
 
 Vue.use(xx)
 

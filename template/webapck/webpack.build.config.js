@@ -13,7 +13,16 @@ module.exports = merge(basicConfig, {
   output: {
     path: resolve('dist'),
     filename: 'index.js',
+    library: '{{ name }}',
     libraryTarget: 'umd'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
   },
   plugins: [
     new CleanWebpackPlugin(['dist'], {

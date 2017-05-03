@@ -14,16 +14,18 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader',
-          'eslint-loader'
+          'babel-loader'{{#lint}},
+          'eslint-loader'{{/lint}}
         ]
       },
+      {{#lint}}
       {
         enforce: 'pre',
         test: /\.vue$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
       },
+      {{/lint}}
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         loader: 'file-loader',

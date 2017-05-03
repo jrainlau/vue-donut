@@ -1,53 +1,24 @@
 {
   "name": "vue-donut",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A vue-template for building vue-components.",
+  "main": "meta.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webapck/dev.js",
-    "doc": "webpack -p --config webapck/doc.js --progress --profile --colors",
-    "build": "webpack -p --config webapck/build.js --progress --profile --colors"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jrainlau/vue-donut.git"
   },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "components"
+  ],
   "author": "Jrain Lau",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jrainlau/vue-donut/issues"
   },
-  "homepage": "https://github.com/jrainlau/vue-donut#readme",
-  "devDependencies": {
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "clean-webpack-plugin": "^0.1.16",
-    "css-loader": "^0.28.1",
-    "eslint": "^3.19.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^4.2.2",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "eslint-plugin-vue": "^2.0.1",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "file-loader": "^0.11.1",
-    "html-webpack-plugin": "^2.28.0",
-    "less": "^2.7.2",
-    "less-loader": "^4.0.3",
-    "postcss-loader": "^1.3.3",
-    "url-loader": "^0.5.8",
-    "vue-loader": "^12.0.2",
-    "vue-template-compiler": "^2.3.0",
-    "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.5",
-    "webpack-merge": "^4.1.0"
-  },
-  "dependencies": {
-    "vue": "^2.3.0"
-  }
+  "homepage": "https://github.com/jrainlau/vue-donut#readme"
 }

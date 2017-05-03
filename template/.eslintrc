@@ -3,7 +3,12 @@
     "ecmaVersion": 2017,
     "sourceType": "module"
   },
-  "extends": "standard",
+  {{#if_eq lintConfig "standard"}}
+  extends: 'standard',
+  {{/if_eq}}
+  {{#if_eq lintConfig "airbnb"}}
+  extends: 'airbnb-base',
+  {{/if_eq}}
   "env": {
     "browser": true
   },
