@@ -12,7 +12,8 @@ module.exports = merge(basicConfig, {
   entry: {
     'js/app': './src/main.js',
     'js/vendor': [
-      'vue'
+      'vue'{{#router}},
+      'vue-router'{{/router}}
     ]
   },
   devtool: 'source-map',
