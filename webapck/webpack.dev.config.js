@@ -8,7 +8,15 @@ const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = merge(basicConfig, {
   entry: {
-    app: './src/main.js',
+    app: './src/main.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
   },
   devtool: 'inline-source-map',
   devServer: {

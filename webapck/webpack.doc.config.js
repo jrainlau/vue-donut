@@ -14,6 +14,14 @@ module.exports = merge(basicConfig, {
       'vue'
     ]
   },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
+      }
+    ]
+  },
   devtool: 'source-map',
   output: {
     path: resolve('docs'),

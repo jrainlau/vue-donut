@@ -4,7 +4,8 @@ import xx from '../dist/index'
 
 Vue.use(xx)
 
-new Vue({
+/* eslint no-unused-vars: "off" */
+const app = new Vue({
   el: '#app',
   ...App
 })

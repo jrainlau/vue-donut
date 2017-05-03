@@ -1,5 +1,4 @@
 const { join } = require('path')
-const webpack = require('webpack')
 
 const resolve = dir => join(__dirname, '..', dir)
 
@@ -14,11 +13,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: [
+          'babel-loader',
+          'eslint-loader'
+        ]
       },
       {
+        enforce: 'pre',
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'eslint-loader',
+        exclude: /node_modules/
       }
     ]
   },
