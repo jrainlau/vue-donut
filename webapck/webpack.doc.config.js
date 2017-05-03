@@ -10,8 +10,8 @@ const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = merge(basicConfig, {
   entry: {
-    app: './src/main.js',
-    vendor: [
+    'js/app': './src/main.js',
+    'js/vendor': [
       'vue'
     ]
   },
@@ -45,7 +45,7 @@ module.exports = merge(basicConfig, {
       allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest']
+      names: ['js/vendor', 'js/manifest']
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -58,6 +58,11 @@ module.exports = merge(basicConfig, {
       },
       chunksSortMode: 'dependency'
     }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new CleanWebpackPlugin(['docs'], {
       root: resolve('./')
     })

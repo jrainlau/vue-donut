@@ -23,6 +23,21 @@ module.exports = {
         test: /\.vue$/,
         loader: 'eslint-loader',
         exclude: /node_modules/
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+        query: {
+          name: 'font/[hash:8].[ext]'
+        }
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'img/[hash:8].[ext]'
+        }
       }
     ]
   },
