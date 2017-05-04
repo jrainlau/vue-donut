@@ -1,46 +1,34 @@
 # Vue-Donut
+`Vue-Donut` is a template work with `vue-cli`, it helps you to build your own VueJS basic UI component library in an easy way.
 
-A template for building `VueJS` UI components library with `Vue-Cli`.
-
-# Usage
+## Usage
 ```
-vue init jrainlau/vue-donut <my-project>
-```
-In order to build a `VueJS` UI components library, first you should be familiar with the [officail guide](https://vuejs.org/v2/guide/plugins.html).
-
-All the `*.vue` files as a component should be located at the `components` folder, and there should have an entry `index.js` file, for example:
-```
-import myComp from './myComp.vue'
-
-const install = (Vue) => {
-  Vue.component('my-comp', myComp)
-}
-
-export default install
+vue init jrainlau/vue-donut <your-project>
 ```
 
-# Commands
-`Vue-Donut` allows you to build a `VueJS` UI components library with **3** command line:
+## Commands
+- `yarn run dev`: Development mode
+  - Is similar to [vue-webpack-boilerplate](https://github.com/vuejs-templates/webpack#whats-included) 
 
-## Development mode
-After running `yarn`, you can run
-```
-yarn run dev
-```
-for development mode. Open `localhost:8080` and begin to build your UI components library.
+- `yarn run build`: Pack and publish mode
+  - Using `src/components/index.js` as the entry file, pack it by `webpack`, then output to `dist` folder.
+  - `dist/index.js` is the library you will publish to `npm`.
+  -   You should be familiar with [how to write a vue.js plugin](https://vuejs.org/v2/guide/plugins.html#Writing-a-Plugin)
+  - `src/components/index.js` should be like this: 
+    ```
+    import myComponent from './my-component.vue'
 
-## Document mode
-The command above is in use to build your UI components library and "Document". After running the command below:
-```
-yarn run doc
-```
-`Vue-Donut` would create a `docs` folder in the root, it's very convenient for `github pages` to used.
+    const install = (Vue) => {
+      Vue.component('my-componen', myComponent)
+    }
 
-## Build mode
-```
-yarn run build
-```
-means `Vue-Donut` using `components/index.js` as entry file, then build it and ouput to `dist` folder. There should be a `index.js` and a `index.js.map` file, then you can use `npm publish` to publish your UI components library to the `NPM`.
+    export default install
 
-## License
+    ```
+- `yarn run doc`: Building document mode
+  - By running `yarn run dev`, you are building a normal SPA application. After all things being done, you could use this command to build your SPA. `app.[hash].js`, `vendor.[hash].js` and `manifest.[hash].js` and extract css files would be outputted to the `docs` folder.
+  - Source maps `*.[hash].map` would be created automatically.
+  - Use `docs` folder as the source of `github pages`.
+
+## Lisence
 MIT
