@@ -1,5 +1,5 @@
 # Vue-Donut
-`Vue-Donut` is a template work with `vue-cli`, it helps you to build your own VueJS basic UI component library in an easy way.
+`Vue-Donut` is a template work with `vue-cli`, it helps you build your own VueJS basic UI component library in an easy way.
 
 ## Usage
 ```
