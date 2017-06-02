@@ -4,10 +4,10 @@
     "sourceType": "module"
   },
   {{#if_eq lintConfig "standard"}}
-  extends: 'standard',
+  "extends": "standard",
   {{/if_eq}}
   {{#if_eq lintConfig "airbnb"}}
-  extends: 'airbnb-base',
+  "extends": "airbnb-base",
   {{/if_eq}}
   "env": {
     "browser": true

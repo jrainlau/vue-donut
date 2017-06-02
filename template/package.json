@@ -5,9 +5,9 @@
   "author": "{{ author }}",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "node_modules/.bin/webpack-dev-server --config webapck/dev.js",
-    "doc": "node_modules/.bin/webpack -p --config webapck/doc.js --progress --profile --colors",
-    "build": "node_modules/.bin/webpack -p --config webapck/build.js --progress --profile --colors"
+    "dev": "node_modules/.bin/webpack-dev-server --config webpack/dev.js",
+    "doc": "node_modules/.bin/webpack -p --config webpack/doc.js --progress --profile --colors",
+    "build": "node_modules/.bin/webpack -p --config webpack/build.js --progress --profile --colors"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
