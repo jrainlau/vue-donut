@@ -3,7 +3,7 @@
 
 ## Usage
 ```
-vue init jrainlau/vue-donut <your-project>
+vue init jrainlau/vue-donut#mobile <your-project>
 ```
 
 ## Commands
