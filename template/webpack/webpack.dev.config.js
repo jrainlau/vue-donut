@@ -8,7 +8,8 @@ const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = merge(basicConfig, {
   entry: {
-    app: './src/main.js'
+    app: './src/document/doc-entry.js',
+    view: './src/view/view-entry.js'
   },
   module: {
     rules: [
@@ -33,7 +34,14 @@ module.exports = merge(basicConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      chunks: ['app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'view.html',
+      template: 'view.html',
+      inject: true,
+      chunks: ['view']
     })
   ]
 })

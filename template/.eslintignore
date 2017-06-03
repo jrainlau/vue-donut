@@ -1,4 +1,5 @@
 dist
 doc
 node_modules
-webpack
+/webpack/**
+/src/**

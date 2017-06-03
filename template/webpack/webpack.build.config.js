@@ -2,12 +2,13 @@ const { join } = require('path')
 const merge = require('webpack-merge')
 const basicConfig = require('./webpack.base.config')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = merge(basicConfig, {
   entry: {
-    app: './src/components/index.js'
+    app: './src/view/components/index.js'
   },
   devtool: 'source-map',
   output: {
@@ -27,6 +28,9 @@ module.exports = merge(basicConfig, {
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root: resolve('./')
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'src/view/assets', to: 'assets' }
+    ])
   ]
 })

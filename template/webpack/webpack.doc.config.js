@@ -10,7 +10,8 @@ const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = merge(basicConfig, {
   entry: {
-    'js/app': './src/main.js',
+    'js/app': './src/document/doc-entry.js',
+    'js/view': './src/view/view-entry.js',
     'js/vendor': [
       'vue'{{#router}},
       'vue-router'{{/router}}
@@ -57,6 +58,19 @@ module.exports = merge(basicConfig, {
         collapseWhitespace: true,
         removeAttributeQuotes: true
       },
+      chunks: ['js/vendor', 'js/manifest', 'js/app'],
+      chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'view.html',
+      template: 'view.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      },
+      chunks: ['js/vendor', 'js/manifest', 'js/view'],
       chunksSortMode: 'dependency'
     }),
     new webpack.LoaderOptionsPlugin({
