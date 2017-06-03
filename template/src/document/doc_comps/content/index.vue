@@ -4,14 +4,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  components: {
-    mdContent: resolve => require(['~components/loan/README.md'], resolve)
-  }
-};
-</script>
-
 <style lang="less">
 .comp-content {
   padding: 30px 0 30px 30px;
