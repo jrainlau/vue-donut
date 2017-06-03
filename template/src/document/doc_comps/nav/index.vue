@@ -1,9 +1,9 @@
 <template>
   <div class="comp-nav">
-   <group title="介绍">
-     <item view="/">介绍</item>
+   <group title="Introduction">
+     <item view="/">About</item>
    </group>
-    <group title="组件">
+    <group title="Components">
       <item v-for="route in navRoute" :key="route.id" :view="route">
         {{route}}
       </item>

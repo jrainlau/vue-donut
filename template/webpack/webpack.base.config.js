@@ -18,7 +18,7 @@ const resolve = dir => join(__dirname, '..', dir)
 
 module.exports = {
   output: {
-    filename: 'bundle.js',
+    filename: 'js/[name].js',
     path: resolve('dist'),
     publicPath: '/'
   },
