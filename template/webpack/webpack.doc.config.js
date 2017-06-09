@@ -20,6 +20,7 @@ module.exports = merge(basicConfig, {
   devtool: 'source-map',
   output: {
     path: resolve('docs'),
+    publicPath: '/docs/',
     filename: '[name].[chunkhash:8].js',
     chunkFilename: 'js/[name].[chunkhash:8].js'
   },

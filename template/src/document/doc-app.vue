@@ -20,7 +20,11 @@ import preview from '~docComps/preview';
 export default {
   computed: {
     currentUrl() {
-      return `${location.protocol}//${location.host}/view.html#${this.$route.path}`;
+      let path = ''
+      if (/docs/.test(location.href)) {
+        path = 'docs/'
+      }
+      return `${location.protocol}//${location.host}/${path}view.html#${this.$route.path}`;
     }
   },
   components: {
